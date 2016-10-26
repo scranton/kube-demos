@@ -2,11 +2,11 @@
 
 if [ ! -d .git ]; then
     git init
-    cp ~/dev/.gitignore .
+    cp $(dirname ${BASH_SOURCE})/../../.gitignore-default .gitignore
     git add .
     git commit -m 'initial commit'
 else
-    cp ~/dev/.gitignore .
+    cp $(dirname ${BASH_SOURCE})/../../.gitignore-default .gitignore
     git add .
 fi
 
